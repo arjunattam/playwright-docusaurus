@@ -1,0 +1,13 @@
+{
+  "docs": {
+    "Introduction": ["why-playwright", "intro", "core-concepts", "debug", "languages"],
+    "Guides": ["selectors", "input", "emulation", "network", "assertions", "verification", "navigations", "multi-pages"],
+    "Tutorials": ["auth", "pom"],
+    "Integrations": ["test-runners", "ci"],
+    "Reference": ["actionability", "api", "installation", "extensibility"],
+    "Get Help": []
+  },
+  "api-reference": {
+    "First Category": ["api"]
+  }
+}

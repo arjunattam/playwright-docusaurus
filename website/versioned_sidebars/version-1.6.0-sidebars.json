@@ -1,0 +1,41 @@
+{
+  "version-1.6.0-docs": {
+    "Introduction": [
+      "version-1.6.0-why-playwright",
+      "version-1.6.0-intro",
+      "version-1.6.0-core-concepts",
+      "version-1.6.0-debug",
+      "version-1.6.0-languages"
+    ],
+    "Guides": [
+      "version-1.6.0-selectors",
+      "version-1.6.0-input",
+      "version-1.6.0-emulation",
+      "version-1.6.0-network",
+      "version-1.6.0-assertions",
+      "version-1.6.0-verification",
+      "version-1.6.0-navigations",
+      "version-1.6.0-multi-pages"
+    ],
+    "Tutorials": [
+      "version-1.6.0-auth",
+      "version-1.6.0-pom"
+    ],
+    "Integrations": [
+      "version-1.6.0-test-runners",
+      "version-1.6.0-ci"
+    ],
+    "Reference": [
+      "version-1.6.0-actionability",
+      "version-1.6.0-api",
+      "version-1.6.0-installation",
+      "version-1.6.0-extensibility"
+    ],
+    "Get Help": []
+  },
+  "version-1.6.0-api-reference": {
+    "First Category": [
+      "version-1.6.0-api"
+    ]
+  }
+}
