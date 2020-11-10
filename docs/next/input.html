@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Input · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Input"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Input · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Input"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Input</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="input"></a><a href="#input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input</h1>
+<!-- GEN:toc-top-level -->
+- [Mouse click](#mouse-click)
+- [Text input](#text-input)
+- [Checkboxes](#checkboxes)
+- [Select options](#select-options)
+- [Type characters](#type-characters)
+- [Keys and shortcuts](#keys-and-shortcuts)
+- [Focus element](#focus-element)
+<!-- GEN:stop -->
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="mouse-click"></a><a href="#mouse-click" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mouse click</h2>
+<p>Performs a simple human click.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Generic click</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'button#submit'</span>);
+
+<span class="hljs-comment">// Double click</span>
+<span class="hljs-keyword">await</span> page.dblclick(<span class="hljs-string">'#item'</span>);
+
+<span class="hljs-comment">// Right click</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#item'</span>, { <span class="hljs-attr">button</span>: <span class="hljs-string">'right'</span> });
+
+<span class="hljs-comment">// Shift + click</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#item'</span>, { <span class="hljs-attr">modifiers</span>: [<span class="hljs-string">'Shift'</span>] });
+
+<span class="hljs-comment">// Hover over element</span>
+<span class="hljs-keyword">await</span> page.hover(<span class="hljs-string">'#item'</span>);
+
+<span class="hljs-comment">// Click the top left corner</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#item'</span>, { <span class="hljs-attr">position</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>} });
+</code></pre>
+<p>Under the hood, this and other pointer-related methods:</p>
+<ul>
+<li>wait for element with given selector to be in DOM</li>
+<li>wait for it to become displayed, i.e. not empty, no <code>display:none</code>, no <code>visibility:hidden</code></li>
+<li>wait for it to stop moving, for example, until css transition finishes</li>
+<li>scroll the element into view</li>
+<li>wait for it to receive pointer events at the action point, for example, waits until element becomes non-obscured by other elements</li>
+<li>retry if the element is detached during any of the above checks</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="forcing-the-click"></a><a href="#forcing-the-click" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forcing the click</h4>
+<p>Sometimes, apps use non-trivial logic where hovering the element overlays it with another element that intercepts the click. This behavior is indistinguishable from a bug where element gets covered and the click is dispatched elsewhere. If you know this is taking place, you can bypass the <a href="/playwright-docusaurus/docs/next/actionability">actionability</a> checks and force the click:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'button#submit'</span>, { <span class="hljs-attr">force</span>: <span class="hljs-literal">true</span> });
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="programmatic-click"></a><a href="#programmatic-click" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Programmatic click</h4>
+<p>If you are not interested in testing your app under the real conditions and want to simulate the click by any means possible, you can trigger the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click"><code>HTMLElement.click()</code></a> behavior via simply dispatching a click event on the element:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> page.dispatchEvent(<span class="hljs-string">'button#submit'</span>, <span class="hljs-string">'click'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pageclickselector-options">page.click(selector[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameclickselector-options">frame.click(selector[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleclickoptions">elementHandle.click([options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagedblclickselector-options">page.dblclick(selector[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framedblclickselector-options">frame.dblclick(selector[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandledblclickoptions">elementHandle.dblclick([options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagehoverselector-options">page.hover(selector[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framehoverselector-options">frame.hover(selector[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandlehoveroptions">elementHandle.hover([options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagedispatcheventselector-type-eventinit-options">page.dispatchEvent(selector, type)</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framedispatcheventselector-type-eventinit-options">frame.dispatchEvent(selector, type)</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandledispatcheventtype-eventinit">elementHandle.dispatchEvent(type)</a> — given element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="text-input"></a><a href="#text-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text input</h2>
+<p>This is the easiest way to fill out the form fields. It focuses the element and triggers an <code>input</code> event with the entered text. It works for <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> and <code>[contenteditable]</code> elements.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Text input</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#name'</span>, <span class="hljs-string">'Peter'</span>);
+
+<span class="hljs-comment">// Date input</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#date'</span>, <span class="hljs-string">'2020-02-02'</span>);
+
+<span class="hljs-comment">// Time input</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#time'</span>, <span class="hljs-string">'13-15'</span>);
+
+<span class="hljs-comment">// Local datetime input</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#local'</span>, <span class="hljs-string">'2020-03-02T05:15'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-1"></a><a href="#api-reference-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pagefillselector-value-options">page.fill(selector, value[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framefillselector-value-options">frame.fill(selector, value[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandlefillvalue-options">elementHandle.fill(value[, options])</a> — given element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="checkboxes"></a><a href="#checkboxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checkboxes</h2>
+<p>This is the easiest way to check and uncheck a checkbox. This method can be used on the <code>input[type=checkbox]</code> and on the <code>label</code> associated with that input.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Check the checkbox</span>
+<span class="hljs-keyword">await</span> page.check(<span class="hljs-string">'#agree'</span>);
+
+<span class="hljs-comment">// Uncheck by input &lt;label&gt;.</span>
+<span class="hljs-keyword">await</span> page.uncheck(<span class="hljs-string">'#subscribe-label'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-2"></a><a href="#api-reference-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pagecheckselector-options">page.check(selector[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageuncheckselector-options">page.uncheck(selector[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framecheckselector-options">frame.check(selector[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameuncheckselector-options">frame.uncheck(selector[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleuncheckoptions">elementHandle.check(value[, options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleuncheckoptions">elementHandle.uncheck(value[, options])</a> — given element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="select-options"></a><a href="#select-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Select options</h2>
+<p>Selects one or multiple options in the <code>&lt;select&gt;</code> element.
+You can specify option <code>value</code>, <code>label</code> or <code>elementHandle</code> to select. Multiple options can be selected.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Single selection matching the value</span>
+<span class="hljs-keyword">await</span> page.selectOption(<span class="hljs-string">'select#colors'</span>, <span class="hljs-string">'blue'</span>);
+
+<span class="hljs-comment">// Single selection matching the label</span>
+<span class="hljs-keyword">await</span> page.selectOption(<span class="hljs-string">'select#colors'</span>, { <span class="hljs-attr">label</span>: <span class="hljs-string">'Blue'</span> });
+
+<span class="hljs-comment">// Multiple selected items</span>
+<span class="hljs-keyword">await</span> page.selectOption(<span class="hljs-string">'select#colors'</span>, [<span class="hljs-string">'red'</span>, <span class="hljs-string">'green'</span>, <span class="hljs-string">'blue'</span>]);
+
+<span class="hljs-comment">// Select the option via element handle</span>
+<span class="hljs-keyword">const</span> option = <span class="hljs-keyword">await</span> page.$(<span class="hljs-string">'#best-option'</span>);
+<span class="hljs-keyword">await</span> page.selectOption(<span class="hljs-string">'select#colors'</span>, option);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-3"></a><a href="#api-reference-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pageselectoptionselector-values-options">page.selectOption(selector, values[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameselectoptionselector-values-options">frame.selectOption(selector, values[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleselectoptionvalues-options">elementHandle.selectOption(values[, options])</a> — given element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="type-characters"></a><a href="#type-characters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type characters</h2>
+<p>Type into the field character by character, as if it was a user with a real keyboard.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Type character by character</span>
+<span class="hljs-keyword">await</span> page.type(<span class="hljs-string">'#area'</span>, <span class="hljs-string">'Hello World!'</span>);
+</code></pre>
+<p>This method will emit all the necessary keyboard events, with all the <code>keydown</code>, <code>keyup</code>, <code>keypress</code> events in place. You can even specify the optional <code>delay</code> between the key presses to simulate real user behavior.</p>
+<blockquote>
+<p><strong>NOTE</strong> that most of the time, <a href="#text-input"><code>page.fill</code></a> will just work. You only need to type characters if there is special keyboard handling on the page.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-4"></a><a href="#api-reference-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pagetypeselector-text-options">page.type(selector, text[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#frametypeselector-text-options">frame.type(selector, text[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandletypetext-options">elementHandle.type(text[, options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#keyboardtypetext-options">keyboard.type(text[, options])</a> — focused element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="keys-and-shortcuts"></a><a href="#keys-and-shortcuts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keys and shortcuts</h2>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Hit Enter</span>
+<span class="hljs-keyword">await</span> page.press(<span class="hljs-string">'#submit'</span>, <span class="hljs-string">'Enter'</span>);
+
+<span class="hljs-comment">// Dispatch Control+Right</span>
+<span class="hljs-keyword">await</span> page.press(<span class="hljs-string">'#name'</span>, <span class="hljs-string">'Control+ArrowRight'</span>);
+
+<span class="hljs-comment">// Press $ sign on keyboard</span>
+<span class="hljs-keyword">await</span> page.press(<span class="hljs-string">'#value'</span>, <span class="hljs-string">'$'</span>);
+</code></pre>
+<p>This method focuses the selected element and produces a single keystroke. It accepts the logical key names that are emitted in the <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">keyboardEvent.key</a> property of the keyboard events:</p>
+<pre><code class="hljs">Backquote, <span class="hljs-keyword">Minus</span>, <span class="hljs-keyword">Equal</span>, <span class="hljs-keyword">Backslash</span>, Backspace, Tab, <span class="hljs-keyword">Delete</span>, Escape,
+ArrowDown, <span class="hljs-keyword">End</span>, <span class="hljs-keyword">Enter</span>, Home, <span class="hljs-keyword">Insert</span>, PageDown, PageUp, ArrowRight,
+ArrowUp, F1 - F12, Digit0 - Digit9, KeyA - KeyZ, etc.
+</code></pre>
+<ul>
+<li><p>You can alternatively specify a single character you'd like to produce such as <code>&quot;a&quot;</code> or <code>&quot;#&quot;</code>.</p></li>
+<li><p>Following modification shortcuts are also supported: <code>Shift, Control, Alt, Meta</code>.</p></li>
+</ul>
+<p>Simple version produces a single character. This character is case-sensitive, so <code>&quot;a&quot;</code> and <code>&quot;A&quot;</code> will produce different results.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// &lt;input id=name&gt;</span>
+<span class="hljs-keyword">await</span> page.press(<span class="hljs-string">'#name'</span>, <span class="hljs-string">'Shift+A'</span>);
+
+<span class="hljs-comment">// &lt;input id=name&gt;</span>
+<span class="hljs-keyword">await</span> page.press(<span class="hljs-string">'#name'</span>, <span class="hljs-string">'Shift+ArrowLeft'</span>);
+</code></pre>
+<p>Shortcuts such as <code>&quot;Control+o&quot;</code> or <code>&quot;Control+Shift+T&quot;</code> are supported as well. When specified with the modifier, modifier is pressed and being held while the subsequent key is being pressed.</p>
+<p>Note that you still need to specify the capital <code>A</code> in <code>Shift-A</code> to produce the capital character. <code>Shift-a</code> produces a lower-case one as if you had the <code>CapsLock</code> toggled.</p>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-5"></a><a href="#api-reference-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pagepressselector-key-options">page.press(selector, key[, options])</a> — main frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#framepressselector-key-options">frame.press(selector, key[, options])</a> — given frame</li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandlepresskey-options">elementHandle.press(key[, options])</a> — given element</li>
+<li><a href="/playwright-docusaurus/docs/next/api#keyboardpresskey-options">keyboard.press(key[, options])</a> — focused element</li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="focus-element"></a><a href="#focus-element" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Focus element</h2>
+<p>For the dynamic pages that handle focus events, you can focus the given element.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> page.focus(<span class="hljs-string">'input#name'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-6"></a><a href="#api-reference-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="https://github.com/microsoft/playwright/blob/master/docs/api.md#pagefocusselector-options">page.focus(selector, [options])</a></li>
+<li><a href="https://github.com/microsoft/playwright/blob/master/docs/api.md#framefocusselector-options">frame.focus(selector, [options])</a></li>
+<li><a href="https://github.com/microsoft/playwright/blob/master/docs/api.md#elementhandlefocus-options">elementHandle.focus([options])</a></li>
+</ul>
+<p><br/></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/selectors"><span class="arrow-prev">← </span><span>Element selectors</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/emulation"><span>Emulation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#mouse-click">Mouse click</a></li><li><a href="#text-input">Text input</a></li><li><a href="#checkboxes">Checkboxes</a></li><li><a href="#select-options">Select options</a></li><li><a href="#type-characters">Type characters</a></li><li><a href="#keys-and-shortcuts">Keys and shortcuts</a></li><li><a href="#focus-element">Focus element</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/favicon.ico" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/doc1.html">Getting Started (or other categories)</a><a href="/playwright-docusaurus/docs/doc2.html">Guides (or other categories)</a><a href="/playwright-docusaurus/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'app-id',
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

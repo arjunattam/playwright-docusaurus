@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Actionability · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Actionability"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Actionability · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Actionability"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Actionability</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="actionability"></a><a href="#actionability" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Actionability</h1>
+<p>Playwright does a range of actionability checks on the elements before performing certain actions. These checks ensure that action behaves as expected, for example Playwright does not click on a disabled button.</p>
+<p>Playwright waits until all the relevant actionability checks pass before performing an action. This means that action will fail with <code>TimeoutError</code> if checks do not pass within the specified <code>timeout</code>.</p>
+<p>Some actions like <code>page.click()</code> support <code>{force: true}</code> option that disable non-essential actionability checks, for example passing <code>force</code> to <code>click()</code> method will not check that the target element actually receives click events.</p>
+<table>
+<thead>
+<tr><th>Actions</th><th>Performed checks</th></tr>
+</thead>
+<tbody>
+<tr><td><code>check()</code><br><code>click()</code><br><code>dblclick()</code><br><code>uncheck()</code></td><td><a href="#visible" title="Visible">Visible</a><br><a href="#stable" title="Stable">Stable</a><br><a href="#enabled" title="Enabled">Enabled</a><br><a href="#receiving-events" title="Receiving Events">Receiving Events</a><br><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>hover()</code></td><td><a href="#visible" title="Visible">Visible</a><br><a href="#stable" title="Stable">Stable</a><br><a href="#receiving-events" title="Receiving Events">Receiving Events</a><br><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>fill()</code></td><td><a href="#visible" title="Visible">Visible</a><br><a href="#enabled" title="Enabled">Enabled</a><br><a href="#editable" title="Editable">Editable</a><br><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>dispatchEvent()</code><br><code>focus()</code><br><code>press()</code><br><code>setInputFiles()</code><br><code>selectOption()</code><br><code>type()</code></td><td><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>scrollIntoViewIfNeeded()</code><br><code>screenshot()</code></td><td><a href="#visible" title="Visible">Visible</a><br><a href="#stable" title="Stable">Stable</a><br><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>selectText()</code></td><td><a href="#visible" title="Visible">Visible</a><br><a href="#attached" title="Attached">Attached</a></td></tr>
+<tr><td><code>getAttribute()</code><br><code>innerText()</code><br><code>innerHTML()</code><br><code>textContent()</code></td><td><a href="#attached" title="Attached">Attached</a></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="visible"></a><a href="#visible" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visible</h3>
+<p>Element is considered visible when it has non-empty bounding box and does not have <code>visibility:hidden</code> computed style. Note that elements of zero size or with <code>display:none</code> are not considered visible.</p>
+<h3><a class="anchor" aria-hidden="true" id="stable"></a><a href="#stable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stable</h3>
+<p>Element is considered stable when it has maintained the same bounding box for at least two consecutive animation frames.</p>
+<h3><a class="anchor" aria-hidden="true" id="enabled"></a><a href="#enabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enabled</h3>
+<p>Element is considered enabled when it is not a <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code> or <code>&lt;input&gt;</code> with a <code>disabled</code> property set.</p>
+<h3><a class="anchor" aria-hidden="true" id="editable"></a><a href="#editable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editable</h3>
+<p>Element is considered editable when it does not have <code>readonly</code> property set.</p>
+<h3><a class="anchor" aria-hidden="true" id="receiving-events"></a><a href="#receiving-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receiving events</h3>
+<p>Element is considered receiving pointer events when it is the hit target of the pointer event at the action point. For example, when clicking at the point <code>(10;10)</code>, Playwright checks whether some other element (usually an overlay) will instead capture the click at <code>(10;10)</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="attached"></a><a href="#attached" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attached</h3>
+<p>Element is considered attached when it is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected">connected</a> to a Document or a ShadowRoot.</p>
+<p>Attached check differs between selector-based and handle-based actions, like <code>page.click(selector, options)</code> as opposite to <code>elementHandle.click(options)</code>:</p>
+<ul>
+<li>For selector-based actions, Playwright first waits for an element matching <code>selector</code> to be attached to the DOM, and then checks that element is still attached before performing the action. If element was detached, the action is retried from the start.</li>
+<li>For handle-based actions, Playwright throws if the element is not attached.</li>
+</ul>
+<p>For example, consider a scenario where Playwright will click <code>Sign Up</code> button regardless of when the <code>page.click()</code> call was made:</p>
+<ul>
+<li>page is checking that user name is unique and <code>Sign Up</code> button is disabled;</li>
+<li>after checking with the server, the disabled <code>Sign Up</code> button is replaced with another one that is now enabled.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/ci"><span class="arrow-prev">← </span><span>Continuous Integration</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/api"><span>API reference</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/favicon.ico" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/doc1.html">Getting Started (or other categories)</a><a href="/playwright-docusaurus/docs/doc2.html">Guides (or other categories)</a><a href="/playwright-docusaurus/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'app-id',
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://arjunattam.github.io/playwright-docusaurus/blog</id>
+    <title>Playwright Blog</title>
+    <updated>2020-11-10T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://arjunattam.github.io/playwright-docusaurus/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Playwright news and events.</subtitle>
+    <logo>https://arjunattam.github.io/playwright-docusaurus/img/playwright-logo.svg</logo>
+    <rights>Copyright © 2020 Microsoft</rights>
+    <entry>
+        <title type="html"><![CDATA[Playwright 1.6: Network improvements]]></title>
+        <id>https://arjunattam.github.io/playwright-docusaurus/blog/2020/11/10/release-1.6.html</id>
+        <link href="https://arjunattam.github.io/playwright-docusaurus/blog/2020/11/10/release-1.6.html"/>
+        <updated>2020-11-10T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Playwright 1.6 is available this week.</p>
+]]></summary>
+        <author>
+            <name>Playwright on Twitter</name>
+            <uri>http://twitter.com/playwrightweb</uri>
+        </author>
+    </entry>
+</feed>

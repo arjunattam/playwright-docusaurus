@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Navigations · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Navigations"/><meta name="docsearch:version" content="1.6.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Navigations · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Navigations"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>1.6.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/verification">Verification</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Navigations</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="navigations"></a><a href="#navigations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigations</h1>
+<p>Playwright can navigate to URLs and handle navigations caused by page interactions. This guide covers common scenarios to wait for page navigations and loading to complete.</p>
+<!-- GEN:toc-top-level -->
+- [Navigation lifecycle](#navigation-lifecycle)
+- [Scenarios initiated by browser UI](#scenarios-initiated-by-browser-ui)
+- [Scenarios initiated by page interaction](#scenarios-initiated-by-page-interaction)
+- [Advanced patterns](#advanced-patterns)
+<!-- GEN:stop -->
+<h2><a class="anchor" aria-hidden="true" id="navigation-lifecycle"></a><a href="#navigation-lifecycle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigation lifecycle</h2>
+<p>Playwright splits the process of showing a new document in a page into <strong>navigation</strong> and <strong>loading</strong>.</p>
+<p><strong>Navigations</strong> can be initiated by changing the page URL or by interacting with the page (e.g., clicking a link). Navigation ends when response headers have been parsed and session history is updated. The navigation intent may be canceled, for example, on hitting an unresolved DNS address or transformed into a file download. Only after the navigation succeeds, page starts <strong>loading</strong> the document.</p>
+<p><strong>Loading</strong> covers getting the remaining response body over the network, parsing, executing the scripts and firing load events:</p>
+<ul>
+<li><a href="/playwright-docusaurus/docs/api#pageurl"><code>page.url()</code></a> is set to the new url</li>
+<li>document content is loaded over network and parsed</li>
+<li><a href="/playwright-docusaurus/docs/api#event-domcontentloaded"><code>domcontentloaded</code></a> event is fired</li>
+<li>page executes some scripts and loads resources like stylesheets and images</li>
+<li><a href="/playwright-docusaurus/docs/api#event-load"><code>load</code></a> event is fired</li>
+<li>page executes dynamically loaded scripts</li>
+<li><code>networkidle</code> is fired when no new network requests are made for 500 ms</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="scenarios-initiated-by-browser-ui"></a><a href="#scenarios-initiated-by-browser-ui" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenarios initiated by browser UI</h2>
+<p>Navigations can be initiated by changing the URL bar, reloading the page or going back or forward in session history.</p>
+<h3><a class="anchor" aria-hidden="true" id="auto-wait"></a><a href="#auto-wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-wait</h3>
+<p>Navigating to a URL auto-waits for the page to fire the <code>load</code> event. If the page does a client-side redirect before <code>load</code>, <code>page.goto</code> will auto-wait for the redirected page to fire the <code>load</code> event.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Navigate the page</span>
+<span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'https://example.com'</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="custom-wait"></a><a href="#custom-wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom wait</h3>
+<p>Override the default behavior to wait until a specific event, like <code>networkidle</code>.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Navigate and wait until network is idle</span>
+<span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'https://example.com'</span>, { <span class="hljs-attr">waitUntil</span>: <span class="hljs-string">'networkidle'</span> });
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wait-for-element"></a><a href="#wait-for-element" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wait for element</h3>
+<p>In lazy-loaded pages, it can be useful to wait until an element is visible with <a href="/playwright-docusaurus/docs/api#pagewaitforselectorselector-options"><code>page.waitForSelector</code></a>. Alternatively, page interactions like <a href="/playwright-docusaurus/docs/api#pageclickselector-options"><code>page.click</code></a> auto-wait for elements.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Navigate and wait for element</span>
+<span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'https://example.com'</span>);
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'text=Example Domain'</span>);
+
+<span class="hljs-comment">// Navigate and click element</span>
+<span class="hljs-comment">// Click will auto-wait for the element</span>
+<span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'https://example.com'</span>);
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'text=Example Domain'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/api#pagegotourl-options"><code>page.goto(url[, options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagereloadoptions"><code>page.reload([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagegobackoptions"><code>page.goBack([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagegoforwardoptions"><code>page.goForward([options])</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="scenarios-initiated-by-page-interaction"></a><a href="#scenarios-initiated-by-page-interaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenarios initiated by page interaction</h2>
+<p>In the scenarios below, <code>page.click</code> initiates a navigation and then waits for the navigation to complete.</p>
+<h3><a class="anchor" aria-hidden="true" id="auto-wait-1"></a><a href="#auto-wait-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-wait</h3>
+<p>By default, <code>page.click</code> will wait for the navigation step to complete. This can be combined with a page interaction on the navigated page which would auto-wait for an element.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Click will auto-wait for navigation to complete</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'text=Login'</span>);
+<span class="hljs-comment">// Fill will auto-wait for element on navigated page</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#username'</span>, <span class="hljs-string">'John Doe'</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="custom-wait-1"></a><a href="#custom-wait-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom wait</h3>
+<p><code>page.click</code> can be combined with <a href="/playwright-docusaurus/docs/api#pagewaitforloadstatestate-options"><code>page.waitForLoadState</code></a> to wait for a loading event.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'button'</span>); <span class="hljs-comment">// Click triggers navigation</span>
+<span class="hljs-keyword">await</span> page.waitForLoadState(<span class="hljs-string">'networkidle'</span>); <span class="hljs-comment">// This resolves after 'networkidle'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wait-for-element-1"></a><a href="#wait-for-element-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wait for element</h3>
+<p>In lazy-loaded pages, it can be useful to wait until an element is visible with <a href="/playwright-docusaurus/docs/api#pagewaitforselectorselector-options"><code>page.waitForSelector</code></a>. Alternatively, page interactions like <a href="/playwright-docusaurus/docs/api#pageclickselector-options"><code>page.click</code></a> auto-wait for elements.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Click triggers navigation</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'text=Login'</span>);
+ <span class="hljs-comment">// Click will auto-wait for the element</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#username'</span>, <span class="hljs-string">'John Doe'</span>);
+
+<span class="hljs-comment">// Click triggers navigation</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'text=Login'</span>);
+ <span class="hljs-comment">// Fill will auto-wait for element</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#username'</span>, <span class="hljs-string">'John Doe'</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="asynchronous-navigation"></a><a href="#asynchronous-navigation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asynchronous navigation</h3>
+<p>Clicking an element could trigger asychronous processing before initiating the navigation. In these cases, it is recommended to explicitly call <a href="/playwright-docusaurus/docs/api#pagewaitfornavigationoptions"><code>page.waitForNavigation</code></a>. For example:</p>
+<ul>
+<li>Navigation is triggered from a <code>setTimeout</code></li>
+<li>Page waits for network requests before navigation</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+  page.click(<span class="hljs-string">'a'</span>), <span class="hljs-comment">// Triggers a navigation after a timeout</span>
+  page.waitForNavigation(), <span class="hljs-comment">// Waits for the next navigation</span>
+]);
+</code></pre>
+<p>The <code>Promise.all</code> pattern prevents a race condition between <code>page.click</code> and <code>page.waitForNavigation</code> when navigation happens quickly.</p>
+<h3><a class="anchor" aria-hidden="true" id="multiple-navigations"></a><a href="#multiple-navigations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple navigations</h3>
+<p>Clicking an element could trigger multiple navigations. In these cases, it is recommended to explicitly <a href="/playwright-docusaurus/docs/api#pagewaitfornavigationoptions"><code>page.waitForNavigation</code></a> to a specific url. For example:</p>
+<ul>
+<li>Client-side redirects issued after the <code>load</code> event</li>
+<li>Multiple pushes to history state</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+  page.waitForNavigation({ <span class="hljs-attr">url</span>: <span class="hljs-string">'**/login'</span> }),
+  page.click(<span class="hljs-string">'a'</span>), <span class="hljs-comment">// Triggers a navigation with a script redirect</span>
+]);
+</code></pre>
+<p>The <code>Promise.all</code> pattern prevents a race condition between <code>page.click</code> and <code>page.waitForNavigation</code> when navigation happens quickly.</p>
+<h3><a class="anchor" aria-hidden="true" id="loading-a-popup"></a><a href="#loading-a-popup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loading a popup</h3>
+<p>When popup is opened, explicitly calling <a href="/playwright-docusaurus/docs/api#pagewaitforloadstatestate-options"><code>page.waitForLoadState</code></a> ensures that popup is loaded to the desired state.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> [ popup ] = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+  page.waitForEvent(<span class="hljs-string">'popup'</span>),
+  page.click(<span class="hljs-string">'a[target="_blank"]'</span>),  <span class="hljs-comment">// Opens popup</span>
+]);
+<span class="hljs-keyword">await</span> popup.waitForLoadState(<span class="hljs-string">'load'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-1"></a><a href="#api-reference-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/api#pageclickselector-options"><code>page.click(selector[, options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagewaitforloadstatestate-options"><code>page.waitForLoadState([state[, options]])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagewaitforselectorselector-options"><code>page.waitForSelector(selector[, options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagewaitfornavigationoptions"><code>page.waitForNavigation([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/api#pagewaitforfunctionpagefunction-arg-options"><code>page.waitForFunction(pageFunction[, arg, options])</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="advanced-patterns"></a><a href="#advanced-patterns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced patterns</h2>
+<p>For pages that have complicated loading patterns, <a href="/playwright-docusaurus/docs/api#pagewaitforfunctionpagefunction-arg-options"><code>page.waitForFunction</code></a> is a powerful and extensible approach to define a custom wait criteria.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'http://example.com'</span>);
+<span class="hljs-keyword">await</span> page.waitForFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">window</span>.amILoadedYet());
+<span class="hljs-comment">// Ready to take a screenshot, according to the page itself.</span>
+<span class="hljs-keyword">await</span> page.screenshot();
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-2"></a><a href="#api-reference-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/api#pagewaitforfunctionpagefunction-arg-options"><code>page.waitForFunction(pageFunction[, arg, options])</code></a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/verification"><span class="arrow-prev">← </span><span>Verification</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/multi-pages"><span>Multi-page scenarios</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#navigation-lifecycle">Navigation lifecycle</a></li><li><a href="#scenarios-initiated-by-browser-ui">Scenarios initiated by browser UI</a><ul class="toc-headings"><li><a href="#auto-wait">Auto-wait</a></li><li><a href="#custom-wait">Custom wait</a></li><li><a href="#wait-for-element">Wait for element</a></li></ul></li><li><a href="#scenarios-initiated-by-page-interaction">Scenarios initiated by page interaction</a><ul class="toc-headings"><li><a href="#auto-wait-1">Auto-wait</a></li><li><a href="#custom-wait-1">Custom wait</a></li><li><a href="#wait-for-element-1">Wait for element</a></li><li><a href="#asynchronous-navigation">Asynchronous navigation</a></li><li><a href="#multiple-navigations">Multiple navigations</a></li><li><a href="#loading-a-popup">Loading a popup</a></li></ul></li><li><a href="#advanced-patterns">Advanced patterns</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/favicon.ico" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/doc1.html">Getting Started (or other categories)</a><a href="/playwright-docusaurus/docs/doc2.html">Guides (or other categories)</a><a href="/playwright-docusaurus/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'app-id',
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

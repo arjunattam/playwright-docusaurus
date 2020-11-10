@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Advanced Installation · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Advanced installation"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Advanced Installation · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Advanced installation"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Advanced Installation</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="advanced-installation"></a><a href="#advanced-installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced installation</h1>
+<!-- GEN:toc -->
+- [Managing browser binaries](#managing-browser-binaries)
+- [Download from artifact repository](#download-from-artifact-repository)
+- [Skip browser downloads](#skip-browser-downloads)
+- [Download single browser binary](#download-single-browser-binary)
+<!-- GEN:stop -->
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="managing-browser-binaries"></a><a href="#managing-browser-binaries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing browser binaries</h2>
+<p>Each version of Playwright needs specific versions of browser binaries to operate. By default Playwright downloads Chromium, WebKit and Firefox browsers into the OS-specific cache folders:</p>
+<ul>
+<li><code>%USERPROFILE%\AppData\Local\ms-playwright</code> on Windows</li>
+<li><code>~/Library/Caches/ms-playwright</code> on MacOS</li>
+<li><code>~/.cache/ms-playwright</code> on Linux</li>
+</ul>
+<pre><code class="hljs css language-sh">npm i -D playwright
+</code></pre>
+<p>These browsers will take few hundreds of megabytes of the disk space when installed:</p>
+<pre><code class="hljs css language-sh">du -hs ./Library/Caches/ms-playwright/*
+281M  chromium-XXXXXX
+187M  firefox-XXXX
+180M  webkit-XXXX
+</code></pre>
+<p>You can override default behavior using environment variables. When installing Playwright, ask it to download browsers into a specific location:</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_BROWSERS_PATH=<span class="hljs-variable">$HOME</span>/pw-browsers npm i -D playwright
+
+<span class="hljs-comment"># Windows</span>
+$ <span class="hljs-built_in">set</span> PLAYWRIGHT_BROWSERS_PATH=%USERPROFILE%\pw-browsers
+$ npm i -D playwright
+</code></pre>
+<p>When running Playwright scripts, ask it to search for browsers in a shared location:</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_BROWSERS_PATH=<span class="hljs-variable">$HOME</span>/pw-browsers node playwright-script.js
+
+<span class="hljs-comment"># Windows</span>
+$ <span class="hljs-built_in">set</span> PLAYWRIGHT_BROWSERS_PATH=%USERPROFILE%\pw-browsers
+$ node playwright-script.js
+</code></pre>
+<p>Or you can opt into the hermetic install and place binaries under the <code>node_modules/</code> folder:</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_BROWSERS_PATH=0 npm i -D playwright
+
+<span class="hljs-comment"># Windows</span>
+$ <span class="hljs-built_in">set</span> PLAYWRIGHT_BROWSERS_PATH=0
+$ npm i -D playwright
+</code></pre>
+<p>Playwright keeps track of packages that need those browsers and will garbage collect them as you update Playwright to the newer versions.</p>
+<p><br></p>
+<blockquote>
+<p><strong>NOTE</strong> Developers can opt-in in this mode via exporting <code>PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers</code> in their <code>.bashrc</code>.</p>
+</blockquote>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="download-from-artifact-repository"></a><a href="#download-from-artifact-repository" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download from artifact repository</h2>
+<p>By default, Playwright downloads browsers from Microsoft and Google public CDNs.</p>
+<p>Sometimes companies maintain an internal artifact repository to host browser
+binaries. In this case, Playwright can be configured to download from a custom
+location using the <code>PLAYWRIGHT_DOWNLOAD_HOST</code> env variable.</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_DOWNLOAD_HOST=192.168.1.78 npm i -D playwright
+
+<span class="hljs-comment"># Windows</span>
+$ <span class="hljs-built_in">set</span> PLAYWRIGHT_DOWNLOAD_HOST=192.168.1.78
+$ npm i -D playwright
+</code></pre>
+<p>It is also possible to use a per-browser download hosts using <code>PLAYWRIGHT_CHROMIUM_DOWNLOAD_HOST</code>, <code>PLAYWRIGHT_FIREFOX_DOWNLOAD_HOST</code> and <code>PLAYWRIGHT_WEBKIT_DOWNLOAD_HOST</code> env variables that
+take precedence over <code>PLAYWRIGHT_DOWNLOAD_HOST</code>.</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_FIREFOX_DOWNLOAD_HOST=192.168.1.1 PLAYWRIGHT_DOWNLOAD_HOST=192.168.1.78 npm i -D playwright
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="skip-browser-downloads"></a><a href="#skip-browser-downloads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Skip browser downloads</h2>
+<p>In certain cases, it is desired to avoid browser downloads altogether because
+browser binaries are managed separately.</p>
+<p>This can be done by setting <code>PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD</code> variable before installation.</p>
+<pre><code class="hljs css language-sh"><span class="hljs-comment"># Linux/macOS</span>
+$ PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm i -D playwright
+
+<span class="hljs-comment"># Windows</span>
+$ <span class="hljs-built_in">set</span> PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+$ npm i -D playwright
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="download-single-browser-binary"></a><a href="#download-single-browser-binary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download single browser binary</h2>
+<p>Playwright ships three packages that bundle only a single browser:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/playwright-chromium"><code>playwright-chromium</code></a></li>
+<li><a href="https://www.npmjs.com/package/playwright-webkit"><code>playwright-webkit</code></a></li>
+<li><a href="https://www.npmjs.com/package/playwright-firefox"><code>playwright-firefox</code></a></li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong> All configuration environment variables also apply to these packages.</p>
+</blockquote>
+<p>Using these packages is as easy as using a regular Playwright:</p>
+<p>Install a specific package</p>
+<pre><code class="hljs css language-sh">$ npm i -D playwright-webkit
+</code></pre>
+<p>Require package</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Notice a proper package name in require</span>
+<span class="hljs-keyword">const</span> { webkit } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'playwright-webkit'</span>);
+
+<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> webkit.launch();
+  <span class="hljs-comment">// ...</span>
+})();
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/api"><span class="arrow-prev">← </span><span>API reference</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/extensibility"><span>Extensibility</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#managing-browser-binaries">Managing browser binaries</a></li><li><a href="#download-from-artifact-repository">Download from artifact repository</a></li><li><a href="#skip-browser-downloads">Skip browser downloads</a></li><li><a href="#download-single-browser-binary">Download single browser binary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/favicon.ico" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/doc1.html">Getting Started (or other categories)</a><a href="/playwright-docusaurus/docs/doc2.html">Guides (or other categories)</a><a href="/playwright-docusaurus/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'app-id',
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
