@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Core concepts · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Core concepts"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Core concepts · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Core concepts"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/playwright-logo.svg"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Introduction</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Core concepts</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="core-concepts"></a><a href="#core-concepts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Core concepts</h1>
+<p>Playwright provides a set of APIs to automate Chromium, Firefox and WebKit
+browsers. By using the Playwright API, you can write JavaScript code to create
+new browser pages, navigate to URLs and then interact with elements on a page.</p>
+<p>Along with a test runner Playwright can be used to automate user interactions to
+validate and test web applications. The Playwright API enables this through
+the following primitives.</p>
+<!-- GEN:toc-top-level -->
+- [Browser](#browser)
+- [Browser contexts](#browser-contexts)
+- [Pages and frames](#pages-and-frames)
+- [Selectors](#selectors)
+- [Auto-waiting](#auto-waiting)
+- [Execution contexts: Node.js and Browser](#execution-contexts-nodejs-and-browser)
+- [Object & Element handles](#object--element-handles)
+<!-- GEN:stop -->
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="browser"></a><a href="#browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Browser</h2>
+<p>A <a href="/playwright-docusaurus/docs/next/api#class-browser"><code>Browser</code></a> refers to an instance of Chromium, Firefox
+or WebKit. Playwright scripts generally start with launching a browser instance
+and end with closing the browser. Browser instances can be launched in headless
+(without a GUI) or headful mode.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> { chromium } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'playwright'</span>);  <span class="hljs-comment">// Or 'firefox' or 'webkit'.</span>
+
+<span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> chromium.launch({ <span class="hljs-attr">headless</span>: <span class="hljs-literal">false</span> });
+<span class="hljs-keyword">await</span> browser.close();
+</code></pre>
+<p>Launching a browser instance can be expensive, and Playwright is designed to
+maximize what a single instance can do through multiple browser contexts.</p>
+<h4><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#class-browser">class <code>Browser</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="browser-contexts"></a><a href="#browser-contexts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Browser contexts</h2>
+<p>A <a href="/playwright-docusaurus/docs/next/api#class-browsercontext"><code>BrowserContext</code></a> is an isolated incognito-alike
+session within a browser instance. Browser contexts are fast and cheap to create.
+Browser contexts can be used to parallelize isolated test executions.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> chromium.launch();
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext();
+</code></pre>
+<p>Browser contexts can also be used to emulate multi-page scenarios involving
+mobile devices, permissions, locale and color scheme.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> { devices } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'playwright'</span>);
+<span class="hljs-keyword">const</span> iPhone = devices[<span class="hljs-string">'iPhone 11 Pro'</span>];
+
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  ...iPhone,
+  <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'geolocation'</span>],
+  <span class="hljs-attr">geolocation</span>: { <span class="hljs-attr">latitude</span>: <span class="hljs-number">52.52</span>, <span class="hljs-attr">longitude</span>: <span class="hljs-number">13.39</span>},
+  <span class="hljs-attr">colorScheme</span>: <span class="hljs-string">'dark'</span>,
+  <span class="hljs-attr">locale</span>: <span class="hljs-string">'de-DE'</span>
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-1"></a><a href="#api-reference-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#class-browsercontext">class <code>BrowserContext</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions">browser.newContext([options])</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="pages-and-frames"></a><a href="#pages-and-frames" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pages and frames</h2>
+<p>A Browser context can have multiple pages. A <a href="/playwright-docusaurus/docs/next/api#class-page"><code>Page</code></a>
+refers to a single tab or a popup window within a browser context. It should be used to navigate to URLs and interact with the page content.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Create a page.</span>
+<span class="hljs-keyword">const</span> page = <span class="hljs-keyword">await</span> context.newPage();
+
+<span class="hljs-comment">// Navigate explicitly, similar to entering a URL in the browser.</span>
+<span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">'http://example.com'</span>);
+<span class="hljs-comment">// Fill an input.</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#search'</span>, <span class="hljs-string">'query'</span>);
+
+<span class="hljs-comment">// Navigate implicitly by clicking a link.</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#submit'</span>);
+<span class="hljs-comment">// Expect a new url.</span>
+<span class="hljs-built_in">console</span>.log(page.url());
+
+<span class="hljs-comment">// Page can navigate from the script - this will be picked up by Playwright.</span>
+<span class="hljs-built_in">window</span>.location.href = <span class="hljs-string">'https://example.com'</span>;
+</code></pre>
+<blockquote>
+<p>Read more on <a href="/playwright-docusaurus/docs/next/navigations">page navigation and loading</a>.</p>
+</blockquote>
+<p>A page can have one or more <a href="/playwright-docusaurus/docs/next/api#class-frame">Frame</a> objects attached to
+it. Each page has a main frame and page-level interactions (like <code>click</code>) are
+assumed to operate in the main frame.</p>
+<p>A page can have additional frames attached with the <code>iframe</code> HTML tag. These
+frames can be accessed for interactions inside the frame.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Get frame using the frame's name attribute</span>
+<span class="hljs-keyword">const</span> frame = page.frame(<span class="hljs-string">'frame-login'</span>);
+
+<span class="hljs-comment">// Get frame using frame's URL</span>
+<span class="hljs-keyword">const</span> frame = page.frame({ <span class="hljs-attr">url</span>: <span class="hljs-regexp">/.*domain.*/</span> });
+
+<span class="hljs-comment">// Get frame using any other selector</span>
+<span class="hljs-keyword">const</span> frameElementHandle = <span class="hljs-keyword">await</span> page.$(<span class="hljs-string">'.frame-class'</span>);
+<span class="hljs-keyword">const</span> frame = <span class="hljs-keyword">await</span> frameElementHandle.contentFrame();
+
+<span class="hljs-comment">// Interact with the frame</span>
+<span class="hljs-keyword">await</span> frame.fill(<span class="hljs-string">'#username-input'</span>, <span class="hljs-string">'John'</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-2"></a><a href="#api-reference-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#class-page">class <code>Page</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#class-frame">class <code>Frame</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageframeoptions">page.frame(options)</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="selectors"></a><a href="#selectors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selectors</h2>
+<p>Playwright can search for elements using CSS selectors, XPath selectors, HTML attributes like <code>id</code>, <code>data-test-id</code> and even text content.</p>
+<p>You can explicitly specify the selector engine you are using or let Playwright detect it.</p>
+<p>All selector engines except for XPath pierce shadow DOM by default. If you want to enforce regular DOM selection, you can use the <code>*:light</code> versions of the selectors. You don't typically need to though.</p>
+<p>Learn more about selectors and selector engines <a href="/playwright-docusaurus/docs/next/selectors">here</a>.</p>
+<p>Some examples below:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Using data-test-id= selector engine</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'data-test-id=foo'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// CSS and XPath selector engines are automatically detected</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'div'</span>);
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'//html/body/div'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Find node by text substring</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'text=Hello w'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Explicit CSS and XPath notation</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'css=div'</span>);
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'xpath=//html/body/div'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Only search light DOM, outside WebComponent shadow DOM:</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'css:light=div'</span>);
+</code></pre>
+<p>Selectors using the same or different engines can be combined using the <code>&gt;&gt;</code> separator. For example,</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Click an element with text 'Sign Up' inside of a #free-month-promo.</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#free-month-promo &gt;&gt; text=Sign Up'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Capture textContent of a section that contains an element with text 'Selectors'.</span>
+<span class="hljs-keyword">const</span> sectionText = <span class="hljs-keyword">await</span> page.$<span class="hljs-built_in">eval</span>(<span class="hljs-string">'*css=section &gt;&gt; text=Selectors'</span>, e =&gt; e.textContent);
+</code></pre>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="auto-waiting"></a><a href="#auto-waiting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-waiting</h2>
+<p>Actions like <code>click</code> and <code>fill</code> auto-wait for the element to be visible and <a href="/playwright-docusaurus/docs/next/actionability">actionable</a>. For example, click will:</p>
+<ul>
+<li>wait for an element with the given selector to appear in the DOM</li>
+<li>wait for it to become visible: have non-empty bounding box and no <code>visibility:hidden</code></li>
+<li>wait for it to stop moving: for example, wait until css transition finishes</li>
+<li>scroll the element into view</li>
+<li>wait for it to receive pointer events at the action point: for example, wait until element becomes non-obscured by other elements</li>
+<li>retry if the element is detached during any of the above checks</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Playwright waits for #search element to be in the DOM</span>
+<span class="hljs-keyword">await</span> page.fill(<span class="hljs-string">'#search'</span>, <span class="hljs-string">'query'</span>);
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Playwright waits for element to stop animating</span>
+<span class="hljs-comment">// and accept clicks.</span>
+<span class="hljs-keyword">await</span> page.click(<span class="hljs-string">'#search'</span>);
+</code></pre>
+<p>You can explicitly wait for an element to appear in the DOM or to become visible:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Wait for #search to appear in the DOM.</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#search'</span>, { <span class="hljs-attr">state</span>: <span class="hljs-string">'attached'</span> });
+<span class="hljs-comment">// Wait for #promo to become visible, for example with `visibility:visible`.</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#promo'</span>);
+</code></pre>
+<p>... or to become hidden or detached</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Wait for #details to become hidden, for example with `display:none`.</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#details'</span>, { <span class="hljs-attr">state</span>: <span class="hljs-string">'hidden'</span> });
+<span class="hljs-comment">// Wait for #promo to be removed from the DOM.</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#promo'</span>, { <span class="hljs-attr">state</span>: <span class="hljs-string">'detached'</span> });
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-3"></a><a href="#api-reference-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pageclickselector-options">page.click(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagefillselector-value-options">page.fill(selector, value[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagewaitforselectorselector-options">page.waitForSelector(selector[, options])</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="execution-contexts-nodejs-and-browser"></a><a href="#execution-contexts-nodejs-and-browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execution contexts: Node.js and Browser</h2>
+<p>Playwright scripts run in your Node.js environment. Your page scripts run in the browser page environment. Those environments don't intersect, they are running in different virtual machines in different processes and even potentially on different computers.</p>
+<p>The <a href="https://github.com/microsoft/playwright/blob/master/docs/api.md#pageevaluatepagefunction-arg"><code>page.evaluate</code></a> API can run a JavaScript function in the context
+of the web page and bring results back to the Node.js environment. Browser globals like
+<code>window</code> and <code>document</code> can be used in <code>evaluate</code>.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> href = <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">document</span>.location.href);
+</code></pre>
+<p>If the result is a Promise or if the function is asynchronous evaluate will automatically wait until it's resolved:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> status = <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> fetch(location.href);
+  <span class="hljs-keyword">return</span> response.status;
+});
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="evaluation"></a><a href="#evaluation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluation</h3>
+<p>Functions passed inside <code>page.evaluate</code> can accept parameters. These parameters are
+serialized and sent into your web page over the wire. You can pass primitive types, JSON-alike objects and remote object handles received from the page.</p>
+<p>Right:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> data = { <span class="hljs-attr">text</span>: <span class="hljs-string">'some data'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">1</span> };
+<span class="hljs-comment">// Pass |data| as a parameter.</span>
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+  <span class="hljs-built_in">window</span>.myApp.use(data);
+}, data);
+</code></pre>
+<p>Wrong:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> data = { <span class="hljs-attr">text</span>: <span class="hljs-string">'some data'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">1</span> };
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// There is no |data| in the web page.</span>
+  <span class="hljs-built_in">window</span>.myApp.use(data);
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-4"></a><a href="#api-reference-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pageevaluatepagefunction-arg"><code>page.evaluate(pageFunction[, arg])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameevaluatepagefunction-arg"><code>frame.evaluate(pageFunction[, arg])</code></a></li>
+<li>Evaluation argument <a href="/playwright-docusaurus/docs/next/api#evaluationargument">examples</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="object--element-handles"></a><a href="#object--element-handles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object &amp; Element handles</h2>
+<p>Playwright can create Node-side handles to the page DOM elements or any other objects inside the page. These handles live in the Node.js process, whereas the actual objects reside in browser.</p>
+<p>There are two types of handles:</p>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#class-jshandle"><code>JSHandle</code></a> to reference any JavaScript objects in the page</li>
+<li><a href="/playwright-docusaurus/docs/next/api#class-elementhandle"><code>ElementHandle</code></a> to reference DOM elements in the page</li>
+</ul>
+<p>Note that since any DOM element in the page is also a JavaScript object,
+Playwright's <a href="/playwright-docusaurus/docs/next/api#class-elementhandle"><code>ElementHandle</code></a> extends
+<a href="/playwright-docusaurus/docs/next/api#class-jshandle"><code>JSHandle</code></a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="handles-lifecycle"></a><a href="#handles-lifecycle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handles Lifecycle</h3>
+<ul>
+<li>Handles can be acquired using the page methods <a href="/playwright-docusaurus/docs/next/api#pageevaluatehandlepagefunction-arg"><code>page.evaluateHandle</code></a>, <a href="/playwright-docusaurus/docs/next/api#pageselector"><code>page.$</code></a> or <a href="/playwright-docusaurus/docs/next/api#pageselector-1"><code>page.$$</code></a> or
+their frame counterparts <a href="/playwright-docusaurus/docs/next/api#frameevaluatehandlepagefunction-arg"><code>frame.evaluateHandle</code></a>, <a href="/playwright-docusaurus/docs/next/api#frameselector"><code>frame.$</code></a> or <a href="/playwright-docusaurus/docs/next/api#frameselector-1"><code>frame.$$</code></a>.</li>
+<li>Once created, handles will retain object from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management">garbage collection</a>.</li>
+<li>Handles will be <strong>automatically disposed</strong> once the page or frame they belong to navigates or closes.</li>
+<li>Handles can be <strong>manually disposed</strong> using <a href="/playwright-docusaurus/docs/next/api#jshandledispose"><code>jsHandle.dispose</code></a> method.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="example-elementhandle"></a><a href="#example-elementhandle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: ElementHandle</h3>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// The first parameter of the elementHandle.evaluate callback is the element handle points to.</span>
+<span class="hljs-keyword">const</span> ulElementHandle = <span class="hljs-keyword">await</span> page.$(<span class="hljs-string">'ul'</span>);
+<span class="hljs-keyword">await</span> ulElementHandle.evaluate(<span class="hljs-function"><span class="hljs-params">ulElement</span> =&gt;</span> getComputedStyle(ulElement).getPropertyValue(<span class="hljs-string">'display'</span>));
+</code></pre>
+<p>Handles can also be passed as arguments to <a href="/playwright-docusaurus/docs/next/api#pageevaluatepagefunction-arg"><code>page.evaluate</code></a> function:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// In the page API, you can pass handle as a parameter.</span>
+<span class="hljs-keyword">const</span> ulElementHandle = <span class="hljs-keyword">await</span> page.$(<span class="hljs-string">'ul'</span>);
+<span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function"><span class="hljs-params">uiElement</span> =&gt;</span> getComputedStyle(uiElement).getPropertyValue(<span class="hljs-string">'display'</span>), uiElement);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example-jshandle"></a><a href="#example-jshandle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: JSHandle</h3>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Create a new array in the page, write a reference to it in</span>
+<span class="hljs-comment">// window.myArray and get a handle to it.</span>
+<span class="hljs-keyword">const</span> myArrayHandle = <span class="hljs-keyword">await</span> page.evaluateHandle(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">window</span>.myArray = [<span class="hljs-number">1</span>];
+  <span class="hljs-keyword">return</span> myArray;
+});
+
+<span class="hljs-comment">// Get current length of the array using the handle.</span>
+<span class="hljs-keyword">const</span> length = <span class="hljs-keyword">await</span> page.evaluate(
+  <span class="hljs-function">(<span class="hljs-params">arg</span>) =&gt;</span> arg.myArray.length,
+  { <span class="hljs-attr">myArray</span>: myArrayHandle }
+);
+
+<span class="hljs-comment">// Add one more element to the array using the handle</span>
+<span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function">(<span class="hljs-params">arg</span>) =&gt;</span> arg.myArray.push(arg.newElement), {
+  <span class="hljs-attr">myArray</span>: myArrayHandle,
+  <span class="hljs-attr">newElement</span>: <span class="hljs-number">2</span>
+});
+
+<span class="hljs-comment">// Get current length of the array using window.myArray reference.</span>
+<span class="hljs-keyword">const</span> newLength = <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">window</span>.myArray.length);
+
+<span class="hljs-comment">// Release the object when it's no longer needed.</span>
+<span class="hljs-keyword">await</span> myArrayHandle.dispose();
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-5"></a><a href="#api-reference-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#class-jshandle">class <code>JSHandle</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#class-elementhandle">class <code>ElementHandle</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageevaluatehandlepagefunction-arg"><code>page.evaluateHandle</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageselector"><code>page.$</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageselector-1"><code>page.$$</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#jshandleevaluatepagefunction-arg"><code>jsHandle.evaluate</code></a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/intro"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/debug"><span>Debugging tools</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#browser">Browser</a></li><li><a href="#browser-contexts">Browser contexts</a></li><li><a href="#pages-and-frames">Pages and frames</a></li><li><a href="#selectors">Selectors</a></li><li><a href="#auto-waiting">Auto-waiting</a></li><li><a href="#execution-contexts-nodejs-and-browser">Execution contexts: Node.js and Browser</a><ul class="toc-headings"><li><a href="#evaluation">Evaluation</a></li></ul></li><li><a href="#object--element-handles">Object &amp; Element handles</a><ul class="toc-headings"><li><a href="#handles-lifecycle">Handles Lifecycle</a></li><li><a href="#example-elementhandle">Example: ElementHandle</a></li><li><a href="#example-jshandle">Example: JSHandle</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/intro.html">Getting Started</a><a href="/playwright-docusaurus/docs/api.html">API Reference</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Slack</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/microsoft/playwright" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/playwrightweb" class="twitter-follow-button">Follow @playwrightweb</a></div></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c85f496c6eea71808027d42111ac550c',
+                indexName: 'playwright',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

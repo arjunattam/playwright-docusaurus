@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Emulation · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Device and environment emulation"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Emulation · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Device and environment emulation"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/playwright-logo.svg"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Emulation</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="device-and-environment-emulation"></a><a href="#device-and-environment-emulation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Device and environment emulation</h1>
+<p>Playwright allows overriding various parameters of the device where the browser is running:</p>
+<ul>
+<li>viewport size, device scale factor, touch support</li>
+<li>locale, timezone</li>
+<li>color scheme</li>
+<li>geolocation</li>
+</ul>
+<p>Most of these parameters are configured during the browser context construction, but some of them such as viewport size can be changed for individual pages.</p>
+<!-- GEN:toc-top-level -->
+- [Devices](#devices)
+- [User agent](#user-agent)
+- [Viewport](#viewport)
+- [Locale & timezone](#locale--timezone)
+- [Permissions](#permissions)
+- [Geolocation](#geolocation)
+- [Color scheme and media](#color-scheme-and-media)
+<!-- GEN:stop -->
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="devices"></a><a href="#devices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Devices</h2>
+<p>Playwright comes with a registry of device parameters for selected mobile devices. It can be used to simulate browser behavior on a mobile device:</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-1-tab-2" class="nav-link active" data-group="group_1" data-tab="tab-group-1-content-2">JavaScript</div><div id="tab-group-1-tab-3" class="nav-link" data-group="group_1" data-tab="tab-group-1-content-3">Python (sync)</div><div id="tab-group-1-tab-4" class="nav-link" data-group="group_1" data-tab="tab-group-1-content-4">Python (async)</div></div><div class="tab-content"><div id="tab-group-1-content-2" class="tab-pane active" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> { chromium, devices } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'playwright'</span>);<br /><span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> chromium.launch();<br /><br /><span class="hljs-keyword">const</span> pixel2 = devices[<span class="hljs-string">'Pixel 2'</span>];<br /><span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({<br />  ...pixel2,<br />});<br /></code></pre>
+</span></div></div><div id="tab-group-1-content-3" class="tab-pane" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-py"><span class="hljs-keyword">from</span> playwright <span class="hljs-keyword">import</span> sync_playwright<br /><br /><span class="hljs-keyword">with</span> sync_playwright() <span class="hljs-keyword">as</span> p:<br />    iphone_11 = p.devices[<span class="hljs-string">'iPhone 11 Pro'</span>]<br />    browser = p.webkit.launch()<br />    context = browser.newContext(**iphone_11)<br /></code></pre>
+</span></div></div><div id="tab-group-1-content-4" class="tab-pane" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-py"><span class="hljs-keyword">import</span> asyncio<br /><span class="hljs-keyword">from</span> playwright <span class="hljs-keyword">import</span> async_playwright<br /><br /><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span><br />    <span class="hljs-keyword">async</span> <span class="hljs-keyword">with</span> async_playwright() <span class="hljs-keyword">as</span> p:<br />        iphone_11 = p.devices[<span class="hljs-string">'iPhone 11 Pro'</span>]<br />        browser = <span class="hljs-keyword">await</span> p.webkit.launch(headless=<span class="hljs-literal">False</span>)<br />        context = <span class="hljs-keyword">await</span> browser.newContext(**iphone_11)<br /></code></pre>
+</span></div></div></div></div>
+<p>All pages created in the context above will share the same device parameters.</p>
+<h4><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#playwrightdevices"><code>playwright.devices</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="user-agent"></a><a href="#user-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User agent</h2>
+<p>All pages created in the context above will share the user agent specified:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">userAgent</span>: <span class="hljs-string">'My user agent'</span>
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-1"></a><a href="#api-reference-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="viewport"></a><a href="#viewport" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Viewport</h2>
+<p>Create a context with custom viewport size:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Create context with given viewport</span>
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">viewport</span>: { <span class="hljs-attr">width</span>: <span class="hljs-number">1280</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">1024</span> }
+});
+
+<span class="hljs-comment">// Resize viewport for individual page</span>
+<span class="hljs-keyword">await</span> page.setViewportSize({ <span class="hljs-attr">width</span>: <span class="hljs-number">1600</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">1200</span> });
+
+<span class="hljs-comment">// Emulate high-DPI</span>
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">viewport</span>: { <span class="hljs-attr">width</span>: <span class="hljs-number">2560</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">1440</span> },
+  <span class="hljs-attr">deviceScaleFactor</span>: <span class="hljs-number">2</span>,
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-2"></a><a href="#api-reference-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagesetviewportsizeviewportsize"><code>page.setViewportSize(viewportSize)</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="locale--timezone"></a><a href="#locale--timezone" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Locale &amp; timezone</h2>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Emulate locale and time</span>
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">locale</span>: <span class="hljs-string">'de-DE'</span>,
+  <span class="hljs-attr">timezoneId</span>: <span class="hljs-string">'Europe/Berlin'</span>,
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-3"></a><a href="#api-reference-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="permissions"></a><a href="#permissions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions</h2>
+<p>Allow all pages in the context to show system notifications:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'notifications'</span>],
+});
+</code></pre>
+<p>Grant all pages in the existing context access to current location:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> context.grantPermissions([<span class="hljs-string">'geolocation'</span>]);
+</code></pre>
+<p>Grant notifications access from a specific domain:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> context.grantPermissions([<span class="hljs-string">'notifications'</span>], {<span class="hljs-attr">origin</span>: <span class="hljs-string">'https://skype.com'</span>} );
+</code></pre>
+<p>Revoke all permissions:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> context.clearPermissions();
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-4"></a><a href="#api-reference-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#browsercontextgrantpermissionspermissions-options"><code>browserContext.grantPermissions(permissions[][, options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#browsercontextclearpermissions"><code>browserContext.clearPermissions()</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="geolocation"></a><a href="#geolocation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Geolocation</h2>
+<p>Create a context with <code>&quot;geolocation&quot;</code> permissions granted:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">geolocation</span>: { <span class="hljs-attr">longitude</span>: <span class="hljs-number">48.858455</span>, <span class="hljs-attr">latitude</span>: <span class="hljs-number">2.294474</span> },
+  <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'geolocation'</span>]
+});
+</code></pre>
+<p>Change the location later:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">await</span> context.setGeolocation({ <span class="hljs-attr">longitude</span>: <span class="hljs-number">29.979097</span>, <span class="hljs-attr">latitude</span>: <span class="hljs-number">31.134256</span> });
+</code></pre>
+<p><strong>Note</strong> you can only change geolocation for all pages in the context.</p>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-5"></a><a href="#api-reference-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#browsercontextsetgeolocationgeolocation"><code>browserContext.setGeolocation(geolocation)</code></a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="color-scheme-and-media"></a><a href="#color-scheme-and-media" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Color scheme and media</h2>
+<p>Create a context with dark or light mode. Pages created in this context will
+follow this color scheme preference.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Create context with dark mode</span>
+<span class="hljs-keyword">const</span> context = <span class="hljs-keyword">await</span> browser.newContext({
+  <span class="hljs-attr">colorScheme</span>: <span class="hljs-string">'dark'</span> <span class="hljs-comment">// or 'light'</span>
+});
+
+<span class="hljs-comment">// Create page with dark mode</span>
+<span class="hljs-keyword">const</span> page = <span class="hljs-keyword">await</span> browser.newPage({
+  <span class="hljs-attr">colorScheme</span>: <span class="hljs-string">'dark'</span> <span class="hljs-comment">// or 'light'</span>
+});
+
+<span class="hljs-comment">// Change color scheme for the page</span>
+<span class="hljs-keyword">await</span> page.emulateMedia({ <span class="hljs-attr">colorScheme</span>: <span class="hljs-string">'dark'</span> });
+
+<span class="hljs-comment">// Change media for page</span>
+<span class="hljs-keyword">await</span> page.emulateMedia({ <span class="hljs-attr">media</span>: <span class="hljs-string">'print'</span> });
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-6"></a><a href="#api-reference-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#browsernewcontextoptions"><code>browser.newContext([options])</code></a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageemulatemediaoptions"><code>page.emulateMedia([options])</code></a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/input"><span class="arrow-prev">← </span><span>Input</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/network"><span>Network</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#devices">Devices</a></li><li><a href="#user-agent">User agent</a></li><li><a href="#viewport">Viewport</a></li><li><a href="#locale--timezone">Locale &amp; timezone</a></li><li><a href="#permissions">Permissions</a></li><li><a href="#geolocation">Geolocation</a></li><li><a href="#color-scheme-and-media">Color scheme and media</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/intro.html">Getting Started</a><a href="/playwright-docusaurus/docs/api.html">API Reference</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Slack</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/microsoft/playwright" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/playwrightweb" class="twitter-follow-button">Follow @playwrightweb</a></div></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c85f496c6eea71808027d42111ac550c',
+                indexName: 'playwright',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

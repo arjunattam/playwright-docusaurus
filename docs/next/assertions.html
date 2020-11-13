@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Assertions · Playwright</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Assertions"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Assertions · Playwright"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arjunattam.github.io/playwright-docusaurus/"/><meta property="og:description" content="# Assertions"/><meta property="og:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arjunattam.github.io/playwright-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/playwright-docusaurus/img/playwright-logo.svg"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/atom.xml" title="Playwright Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://arjunattam.github.io/playwright-docusaurus/blog/feed.xml" title="Playwright Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/playwright-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/playwright-docusaurus/css/main.css"/><script src="/playwright-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/playwright-docusaurus/"><img class="logo" src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright"/><h2 class="headerTitleWithLogo">Playwright</h2></a><a href="/playwright-docusaurus/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/playwright-docusaurus/docs/next/intro" target="_self">Docs</a></li><li class=""><a href="/playwright-docusaurus/docs/next/api" target="_self">API</a></li><li class=""><a href="/playwright-docusaurus/help" target="_self">Help</a></li><li class=""><a href="/playwright-docusaurus/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/microsoft/playwright" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/why-playwright">Why Playwright?</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/intro">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/core-concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/debug">Debugging tools</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/languages">Supported languages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/selectors">Element selectors</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/input">Input</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/emulation">Emulation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/network">Network</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/playwright-docusaurus/docs/next/assertions">Assertions</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/verification">Verification</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/navigations">Navigations</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/multi-pages">Multi-page scenarios</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/pom">Page Object Models</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integrations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/test-runners">Test Runners</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/ci">Continuous Integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/actionability">Actionability</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/installation">Advanced Installation</a></li><li class="navListItem"><a class="navItem" href="/playwright-docusaurus/docs/next/extensibility">Extensibility</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Assertions</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="assertions"></a><a href="#assertions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assertions</h1>
+<p>The Playwright API can be used to read element contents and properties for test assertions. These values are fetched from the browser page and asserted in
+Node.js.</p>
+<p>The examples in this guide use the built-in <a href="https://nodejs.org/api/assert.html"><code>assert</code> module</a>, but they can be used with any assertion library (like <a href="https://www.npmjs.com/package/expect">Expect</a> or <a href="https://www.npmjs.com/package/chai">Chai</a>). See <a href="/playwright-docusaurus/docs/next/test-runners">Test runners</a> for more info.</p>
+<!-- GEN:toc-top-level -->
+- [Common patterns](#common-patterns)
+- [Element Handles](#element-handles)
+- [Custom assertions](#custom-assertions)
+<!-- GEN:stop -->
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="common-patterns"></a><a href="#common-patterns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common patterns</h2>
+<p>Playwright provides convenience APIs for common assertion tasks, like finding the
+text content of an element. These APIs require a <a href="/playwright-docusaurus/docs/next/selectors">selector</a> to locate
+the element.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Assert text content</span>
+<span class="hljs-keyword">const</span> content = <span class="hljs-keyword">await</span> page.textContent(<span class="hljs-string">'nav:first-child'</span>);
+assert(content === <span class="hljs-string">'home'</span>);
+
+<span class="hljs-comment">// Assert inner text</span>
+<span class="hljs-keyword">const</span> text = <span class="hljs-keyword">await</span> page.innerText(<span class="hljs-string">'.selected'</span>);
+assert(text === <span class="hljs-string">'value'</span>);
+
+<span class="hljs-comment">// Assert inner HTML</span>
+<span class="hljs-keyword">const</span> html = <span class="hljs-keyword">await</span> page.innerHTML(<span class="hljs-string">'div.result'</span>);
+assert(html === <span class="hljs-string">'&lt;p&gt;Result&lt;/p&gt;'</span>)
+
+<span class="hljs-comment">// Assert `checked` attribute</span>
+<span class="hljs-keyword">const</span> checked = <span class="hljs-keyword">await</span> page.getAttribute(<span class="hljs-string">'input'</span>, <span class="hljs-string">'checked'</span>);
+assert(checked);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pagetextcontentselector-options">page.textContent(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageinnertextselector-options">page.innerText(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageinnerhtmlselector-options">page.innerHTML(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pagegetattributeselector-name-options">page.getAttribute(selector, name[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frametextcontentselector-options">frame.textContent(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameinnertextselector-options">frame.innerText(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameinnerhtmlselector-options">frame.innerHTML(selector[, options])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#framegetattributeselector-name-options">frame.getAttribute(selector, name[, options])</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="element-handles"></a><a href="#element-handles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Element Handles</h2>
+<p><a href="/playwright-docusaurus/docs/next/api#class-elementhandle">ElementHandle</a> objects represent in-page DOM
+elements. They can be used to assert for multiple properties of the element.</p>
+<p>It is recommended to fetch the <code>ElementHandle</code> object with
+<a href="/playwright-docusaurus/docs/next/api#pagewaitforselectorselector-options"><code>page.waitForSelector</code></a> or
+<a href="/playwright-docusaurus/docs/next/api#framewaitforselectorselector-options"><code>frame.waitForSelector</code></a>. These
+APIs wait for the element to be visible and then return an <code>ElementHandle</code>.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Get the element handle</span>
+<span class="hljs-keyword">const</span> elementHandle = page.waitForSelector(<span class="hljs-string">'#box'</span>);
+
+<span class="hljs-comment">// Assert bounding box for the element</span>
+<span class="hljs-keyword">const</span> boundingBox = <span class="hljs-keyword">await</span> elementHandle.boundingBox();
+assert(boundingBox.width === <span class="hljs-number">100</span>);
+
+<span class="hljs-comment">// Assert attribute for the element</span>
+<span class="hljs-keyword">const</span> classNames = <span class="hljs-keyword">await</span> elementHandle.getAttribute(<span class="hljs-string">'class'</span>);
+assert(classNames.includes(<span class="hljs-string">'highlighted'</span>));
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-1"></a><a href="#api-reference-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandletextcontent">elementHandle.textContent()</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleinnertext">elementHandle.innerText()</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleinnerhtml">elementHandle.innerHTML()</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandlegetattributename">elementHandle.getAttribute(name)</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleboundingbox">elementHandle.boundingBox()</a></li>
+</ul>
+<p><br/></p>
+<h2><a class="anchor" aria-hidden="true" id="custom-assertions"></a><a href="#custom-assertions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom assertions</h2>
+<p>With Playwright, you can also write custom JavaScript to run in the context of
+the browser. This is useful in situations where you want to assert for values
+that are not covered by the convenience APIs above.</p>
+<p>The following APIs do not auto-wait for the element. It is recommended to use
+<a href="/playwright-docusaurus/docs/next/api#pagewaitforselectorselector-options"><code>page.waitForSelector</code></a> or
+<a href="/playwright-docusaurus/docs/next/api#framewaitforselectorselector-options"><code>frame.waitForSelector</code></a>.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Assert local storage value</span>
+<span class="hljs-keyword">const</span> userId = page.evaluate(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">window</span>.localStorage.getItem(<span class="hljs-string">'userId'</span>));
+assert(userId);
+
+<span class="hljs-comment">// Assert value for input element</span>
+<span class="hljs-keyword">await</span> page.waitForSelector(<span class="hljs-string">'#search'</span>);
+<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> page.$<span class="hljs-built_in">eval</span>(<span class="hljs-string">'#search'</span>, el =&gt; el.value);
+assert(value === <span class="hljs-string">'query'</span>);
+
+<span class="hljs-comment">// Assert computed style</span>
+<span class="hljs-keyword">const</span> fontSize = <span class="hljs-keyword">await</span> page.$<span class="hljs-built_in">eval</span>(<span class="hljs-string">'div'</span>, el =&gt; <span class="hljs-built_in">window</span>.getComputedStyle(el).fontSize);
+assert(fontSize === <span class="hljs-string">'16px'</span>);
+
+<span class="hljs-comment">// Assert list length</span>
+<span class="hljs-keyword">const</span> length = <span class="hljs-keyword">await</span> page.$$<span class="hljs-built_in">eval</span>(<span class="hljs-string">'li.selected'</span>, (items) =&gt; items.length);
+assert(length === <span class="hljs-number">3</span>);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="api-reference-2"></a><a href="#api-reference-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API reference</h4>
+<ul>
+<li><a href="/playwright-docusaurus/docs/next/api#pageevaluatepagefunction-arg">page.evaluate(pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageevalselector-pagefunction-arg">page.$eval(selector, pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#pageevalselector-pagefunction-arg-1">page.$$eval(selector, pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameevaluatepagefunction-arg">frame.evaluate(pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameevalselector-pagefunction-arg">frame.$eval(selector, pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#frameevalselector-pagefunction-arg-1">frame.$$eval(selector, pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleevalselector-pagefunction-arg">elementHandle.$eval(selector, pageFunction[, arg])</a></li>
+<li><a href="/playwright-docusaurus/docs/next/api#elementhandleevalselector-pagefunction-arg-1">elementHandle.$$eval(selector, pageFunction[, arg])</a></li>
+<li>Evaluation argument <a href="/playwright-docusaurus/docs/next/api#evaluationargument">examples</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/playwright-docusaurus/docs/next/network"><span class="arrow-prev">← </span><span>Network</span></a><a class="docs-next button" href="/playwright-docusaurus/docs/next/verification"><span>Verification</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#common-patterns">Common patterns</a></li><li><a href="#element-handles">Element Handles</a></li><li><a href="#custom-assertions">Custom assertions</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/playwright-docusaurus/" class="nav-home"><img src="/playwright-docusaurus/img/playwright-logo.svg" alt="Playwright" width="66" height="58"/></a><div><h5>Docs</h5><a href="/playwright-docusaurus/docs/intro.html">Getting Started</a><a href="/playwright-docusaurus/docs/api.html">API Reference</a></div><div><h5>Community</h5><a href="/playwright-docusaurus/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Slack</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/playwright-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/microsoft/playwright" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/playwrightweb" class="twitter-follow-button">Follow @playwrightweb</a></div></div></section><section class="copyright">Copyright © 2020 Microsoft</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c85f496c6eea71808027d42111ac550c',
+                indexName: 'playwright',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
